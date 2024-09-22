@@ -1,0 +1,613 @@
+{
+	"info": {
+		"_postman_id": "a809341e-8abb-46ed-8b89-08407c91482a",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36408051"
+	},
+	"item": [
+		{
+			"name": "API Manual",
+			"item": [
+				{
+					"name": "exist city",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"packages": {},
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.openweathermap.org/data/2.5/forecast?id=360630&q=cairo&appid=eb00c2328f5439edfd980f3f3fbedecd",
+							"protocol": "http",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "360630"
+								},
+								{
+									"key": "q",
+									"value": "cairo"
+								},
+								{
+									"key": "appid",
+									"value": "eb00c2328f5439edfd980f3f3fbedecd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "non exist city",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.openweathermap.org/data/2.5/forecast?id=360630&q=asdasd&appid=eb00c2328f5439edfd980f3f3fbedecd",
+							"protocol": "http",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "360630"
+								},
+								{
+									"key": "q",
+									"value": "asdasd"
+								},
+								{
+									"key": "appid",
+									"value": "eb00c2328f5439edfd980f3f3fbedecd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "without city",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.openweathermap.org/data/2.5/forecast?id=360630&q=&appid=eb00c2328f5439edfd980f3f3fbedecd",
+							"protocol": "http",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "360630"
+								},
+								{
+									"key": "q",
+									"value": ""
+								},
+								{
+									"key": "appid",
+									"value": "eb00c2328f5439edfd980f3f3fbedecd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "city with lowercase",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.openweathermap.org/data/2.5/forecast?id=360630&q=cairo&appid=eb00c2328f5439edfd980f3f3fbedecd",
+							"protocol": "http",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "360630"
+								},
+								{
+									"key": "q",
+									"value": "cairo"
+								},
+								{
+									"key": "appid",
+									"value": "eb00c2328f5439edfd980f3f3fbedecd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "city with space",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.openweathermap.org/data/2.5/forecast?id=360630&q=new york&appid=eb00c2328f5439edfd980f3f3fbedecd",
+							"protocol": "http",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "360630"
+								},
+								{
+									"key": "q",
+									"value": "new york"
+								},
+								{
+									"key": "appid",
+									"value": "eb00c2328f5439edfd980f3f3fbedecd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "city with special character",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.openweathermap.org/data/2.5/forecast?id=360630&q=c@iro&appid=eb00c2328f5439edfd980f3f3fbedecd",
+							"protocol": "http",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "360630"
+								},
+								{
+									"key": "q",
+									"value": "c@iro"
+								},
+								{
+									"key": "appid",
+									"value": "eb00c2328f5439edfd980f3f3fbedecd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "city in different language",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.openweathermap.org/data/2.5/forecast?id=360630&q=القاهرة&appid=eb00c2328f5439edfd980f3f3fbedecd",
+							"protocol": "http",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "360630"
+								},
+								{
+									"key": "q",
+									"value": "القاهرة"
+								},
+								{
+									"key": "appid",
+									"value": "eb00c2328f5439edfd980f3f3fbedecd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "try with invalid key",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.openweathermap.org/data/2.5/forecast?id=360630&q=cairo&appid=eb00c2328f5439edfd980f3f3fbedecdasdas",
+							"protocol": "http",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "360630"
+								},
+								{
+									"key": "q",
+									"value": "cairo"
+								},
+								{
+									"key": "appid",
+									"value": "eb00c2328f5439edfd980f3f3fbedecdasdas"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "try with long maximum number of character values",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.openweathermap.org/data/2.5/forecast?id=360630&q=San Fernando del Valle de Catamarca&appid=eb00c2328f5439edfd980f3f3fbedecd",
+							"protocol": "http",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "360630"
+								},
+								{
+									"key": "q",
+									"value": "San Fernando del Valle de Catamarca"
+								},
+								{
+									"key": "appid",
+									"value": "eb00c2328f5439edfd980f3f3fbedecd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "city name with mix of upper and lowercase",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.openweathermap.org/data/2.5/forecast?id=360630&q=CaIRo&appid=eb00c2328f5439edfd980f3f3fbedecd",
+							"protocol": "http",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "360630"
+								},
+								{
+									"key": "q",
+									"value": "CaIRo"
+								},
+								{
+									"key": "appid",
+									"value": "eb00c2328f5439edfd980f3f3fbedecd"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "ITWorx Technical task"
+		}
+	]
+}
